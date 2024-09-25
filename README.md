@@ -54,6 +54,7 @@ This project offers a dynamic and interactive platform where users can sketch, a
 
 4. **Run the application**:
     ```bash
+    npx convex dev
     npm run dev
     ```
    The app will be available at `http://localhost:3000`.
