@@ -28,8 +28,8 @@ This project offers a dynamic and interactive platform where users can sketch, a
 - **[zustand](https://zustand-demo.pmnd.rs/)**: State management solution for React.
 - **[radix-ui](https://www.radix-ui.com/)**: Unstyled, accessible UI primitives.
 
-## Pictures
 
+## Pictures
 
 ## Installation & Setup
 
@@ -76,4 +76,4 @@ We welcome contributions to enhance this project! To contribute:
 2. Create a new feature branch: `git checkout -b my-new-feature`.
 3. Commit your changes: `git commit -am 'Add some feature'`.
 4. Push to the branch: `git push origin my-new-feature`.
-5. Create a new Pull Request.
+
