@@ -14,10 +14,10 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
         <div className="h-full flex">
           <OrgSidebar />
           <div className="flex flex-col h-full w-full">
-            <div className="h-[80px]">
+            <div className="h-[60px]">
               <NavBar />
             </div>
-            <div className="h-[calc(100%-80px)]">{children}</div>
+            <div className="h-[calc(100%-60px)]">{children}</div>
           </div>
         </div>
       </div>

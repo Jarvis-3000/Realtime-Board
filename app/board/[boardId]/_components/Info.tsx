@@ -36,7 +36,7 @@ export const Info = ({ boardId }: InfoProps) => {
   }
 
   return (
-    <div className="absolute top-2 left-2 flex items-center  py-2 px-2 bg-white rounded-lg shadow-md">
+    <div className="absolute top-2 left-2 flex items-center py-2 px-2 bg-white dark:bg-gray-500 rounded-lg shadow-md">
       <Hint
         label="Go to boards"
         side="bottom"
@@ -48,7 +48,7 @@ export const Info = ({ boardId }: InfoProps) => {
             <Image src="/logo.svg" alt="board logo" width={40} height={40} />
             <span
               className={cn(
-                "font-semibold text-xl ml-2 text-black",
+                "font-semibold text-xl ml-2",
                 font.className
               )}
             >
@@ -59,7 +59,7 @@ export const Info = ({ boardId }: InfoProps) => {
       </Hint>
       <TabSeparator />
       <Hint
-        label="Double click to rename"
+        label="Click to rename"
         side="bottom"
         sideOffset={15}
         tooltipArrow={false}
@@ -68,7 +68,7 @@ export const Info = ({ boardId }: InfoProps) => {
         <Button
           variant="board"
           className="text-base font-medium px-2"
-          onDoubleClick={() => onOpen(data._id, data.title)}
+          onClick={() => onOpen(data._id, data.title)}
         >
           {data.title}
         </Button>
