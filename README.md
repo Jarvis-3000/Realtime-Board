@@ -30,6 +30,12 @@ This project offers a dynamic and interactive platform where users can sketch, a
 
 
 ## Pictures
+![image](https://github.com/user-attachments/assets/51bc8c27-2797-4488-b84a-e2eb412f4123)
+![image](https://github.com/user-attachments/assets/036ad84d-42d3-4a05-a351-3f26c58e2929)
+![image](https://github.com/user-attachments/assets/4abeda5a-fefe-4859-b83c-773f2e3b779b)
+
+
+
 
 ## Installation & Setup
 
