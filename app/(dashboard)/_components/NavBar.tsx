@@ -7,13 +7,12 @@ import {
 } from "@clerk/nextjs";
 import { SearchIput } from "./SearchInput";
 import { InviteButton } from "./InviteButton";
-import { ThemeToggler } from "./ThemeToggler";
 
 export const NavBar = () => {
   const { organization } = useOrganization();
 
   return (
-    <div className="h-full flex items-center gap-x-5 px-3 py-3 bg-gray-200 dark:bg-gray-300">
+    <div className="h-[60px] w-full overflow-auto flex  flex-shrink-0 items-center gap-x-5 px-3 py-3 bg-gray-200 dark:bg-gray-300">
       <div className="hidden lg:flex lg:flex-1">
         <SearchIput />
       </div>
@@ -30,7 +29,6 @@ export const NavBar = () => {
         />
       </div>
       {organization && <InviteButton />}
-      <ThemeToggler />
       <UserButton />
     </div>
   );

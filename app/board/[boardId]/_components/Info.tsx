@@ -94,6 +94,6 @@ export const Info = ({ boardId }: InfoProps) => {
 
 export const InfoSkeleton = () => {
   return (
-    <Skeleton className="absolute top-2 bg-white rounded-lg shadow-md left-2 w-[300px] h-[50px]"></Skeleton>
+    <Skeleton className="absolute top-2 bg-white dark:bg-gray-500 rounded-lg shadow-md left-2 w-[300px] h-[50px]"></Skeleton>
   );
 };

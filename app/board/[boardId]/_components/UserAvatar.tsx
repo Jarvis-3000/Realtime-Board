@@ -23,7 +23,7 @@ export const UserAvatar = ({
     >
       <Avatar className="h-8 w-8 border-2" style={{ borderColor: borderColor }}>
         <AvatarImage src={src} />
-        <AvatarFallback className="text-xs font-semibold bg-gray-100">
+        <AvatarFallback className="text-xs font-semibold bg-gray-100 text-black">
           {fallback}
         </AvatarFallback>
       </Avatar>

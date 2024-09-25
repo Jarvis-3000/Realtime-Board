@@ -49,6 +49,6 @@ export const Participants = () => {
 
 export const ParticipantsSkeleton = () => {
   return (
-    <Skeleton className="absolute top-2 right-2 bg-white rounded-lg w-[200px] h-[50px] shadow-md" />
+    <Skeleton className="absolute top-2 right-2 bg-white dark:bg-gray-500 rounded-lg w-[50px] md:w-[100px] h-[100px] md:h-[50px] shadow-md" />
   );
 };

@@ -8,17 +8,13 @@ interface DashboardLayoutProps {
 
 const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
   return (
-    <main className="w-full flex h-full">
+    <main className="w-full h-full flex overflow-hidden">
       <Sidebar />
-      <div className="flex-1 h-full">
-        <div className="h-full flex">
-          <OrgSidebar />
-          <div className="flex flex-col h-full w-full">
-            <div className="h-[60px]">
-              <NavBar />
-            </div>
-            <div className="h-[calc(100%-60px)]">{children}</div>
-          </div>
+      <div className="flex-1 h-full flex overflow-hidden">
+        <OrgSidebar />
+        <div className="flex flex-col flex-1 min-w-0">
+          <NavBar />
+          <div className="flex-1 overflow-auto">{children}</div>
         </div>
       </div>
     </main>
