@@ -133,8 +133,8 @@ export const Toolbar = ({
 export const ToolbarSkeleton = () => {
   return (
     <div className="absolute top-[50%] -translate-y-[50%] left-2 flex flex-col gap-y-4">
-      <Skeleton className="bg-white rounded-lg w-[50px] h-[250px] shadow-md" />
-      <Skeleton className="bg-white rounded-lg w-[50px] h-[100px] shadow-md" />
+      <Skeleton className="bg-white dark:bg-gray-500 rounded-lg w-[50px] h-[250px] shadow-md" />
+      <Skeleton className="bg-white dark:bg-gray-500 rounded-lg w-[50px] h-[100px] shadow-md" />
     </div>
   );
 };

@@ -71,8 +71,8 @@ const BoardCard = ({
           />
           <Overlay />
           <Actions id={id} title={title} side="right">
-            <button className="absolute z-50 top-1 right-2 opacity-0 group-hover:opacity-100 ">
-              <MoreHorizontal className="text-white opacity-75 hover:opacity-100 transition-opacity" />
+            <button className="absolute z-50 top-1 right-2 ">
+              <MoreHorizontal className="text-black group-hover:text-white" />
             </button>
           </Actions>
         </div>
