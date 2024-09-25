@@ -86,7 +86,7 @@ export const SelectionTools = memo(
 
     return (
       <div
-        className="absolute p-3 rounded-xl bg-white shadow-sm border flex select-none"
+        className="absolute p-3 rounded-xl bg-white dark:bg-gray-500 shadow-md border-none  flex select-none"
         style={{
           transform: `translate(calc(${x}px - 50%), calc(${y - 16}px - 100%))`,
         }}

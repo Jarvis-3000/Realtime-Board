@@ -14,10 +14,31 @@ interface ThemeProviderProps {
 export const ThemeContext = createContext<IThemeContext | null>(null);
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
-  const [theme, setTheme] = useState<"system" | "light" | "dark">("system");
+  const [theme, setTheme] = useState<string>("system");
 
-  // Effect to manipulate the DOM and apply the current theme
+  // Effect to safely access localStorage and set theme after component mounts
   useEffect(() => {
+    let savedTheme = localStorage.getItem("theme") || "system";
+
+    if (
+      savedTheme !== "system" &&
+      savedTheme !== "dark" &&
+      savedTheme !== "light"
+    ) {
+      savedTheme = "system";
+    }
+
+    setTheme(savedTheme);
+    handleThemeChange(savedTheme); // Apply the saved theme on mount
+  }, []);
+
+  const handleThemeChange = (theme: string) => {
+    if (!theme) {
+      throw new Error("Valid theme value is required");
+    }
+
+    console.log("theme change", theme);
+
     const root = document.documentElement;
 
     // for normal css styling
@@ -29,10 +50,13 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
     } else {
       root.classList.remove("dark");
     }
-  }, [theme]);
+
+    // store in localstorage
+    localStorage.setItem("theme", theme);
+  };
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
+    <ThemeContext.Provider value={{ theme, setTheme: handleThemeChange }}>
       {children}
     </ThemeContext.Provider>
   );

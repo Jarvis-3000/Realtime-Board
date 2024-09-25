@@ -31,7 +31,8 @@ export const AddBoardCard = ({ orgId, disabled }: AddBoardCardProps) => {
       disabled={pending || disabled}
       className={cn(
         "bg-blue-600 group aspect-[100/120] border rounded-lg flex flex-col justify-center items-center gap-3",
-        (pending || disabled) && "opacity-70 cursor-not-allowed"
+        (pending || disabled) && "opacity-70 cursor-not-allowed",
+        "border-none"
       )}
     >
       {pending ? (

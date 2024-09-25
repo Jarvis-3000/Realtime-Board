@@ -7,12 +7,13 @@ import {
 } from "@clerk/nextjs";
 import { SearchIput } from "./SearchInput";
 import { InviteButton } from "./InviteButton";
+import { ThemeToggler } from "./ThemeToggler";
 
 export const NavBar = () => {
   const { organization } = useOrganization();
 
   return (
-    <div className="flex items-center gap-x-5 px-3 py-3 bg-gray-200">
+    <div className="h-full flex items-center gap-x-5 px-3 py-3 bg-gray-200 dark:bg-gray-300">
       <div className="hidden lg:flex lg:flex-1">
         <SearchIput />
       </div>
@@ -22,13 +23,14 @@ export const NavBar = () => {
           appearance={{
             elements: {
               rootBox: "flex w-full",
-              organizationSwitcherTrigger: `bg-white w-full p-2 rounded-lg justify-between
+              organizationSwitcherTrigger: `bg-white dark:bg-white w-full p-2 rounded-lg justify-between
             border border-gray-100 focus:border-blue-500 max-w-[400px]`,
             },
           }}
         />
       </div>
       {organization && <InviteButton />}
+      <ThemeToggler />
       <UserButton />
     </div>
   );

@@ -15,7 +15,7 @@ export default function DashboardPage({ searchParams }: DashboardPageProps) {
   const { organization } = useOrganization();
 
   return (
-    <div className="h-full w-full py-2">
+    <div className="h-full w-full">
       {!organization ? (
         <EmptyOrg />
       ) : (

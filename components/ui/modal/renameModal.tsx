@@ -40,11 +40,15 @@ export const RenameModal = () => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="bg-white">
+      <DialogContent className="bg-white dark:bg-gray-500 max-w-[90%] text-black dark:text-white rounded-lg">
         <DialogHeader>
-          <DialogTitle>Edit board title</DialogTitle>
+          <DialogTitle>
+            Edit board title
+          </DialogTitle>
         </DialogHeader>
-        <DialogDescription>Enter a new title for this board</DialogDescription>
+        <DialogDescription className="text-black dark:text-white">
+          Enter a new title for this board
+        </DialogDescription>
         <form onSubmit={onSubmit}>
           <Input
             required
@@ -53,14 +57,15 @@ export const RenameModal = () => {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="Board Title"
+            className="bg-white text-black border-1 focus-visible:ring-2 focus-visible:ring-blue-500"
           />
           <DialogFooter className="mt-6">
             <DialogClose asChild>
-              <Button type="button" variant="outline">
-                Cancel
+              <Button type="button" className="bg-white dark:bg-gray-100">
+                <span className="text-black">Cancel</span>
               </Button>
             </DialogClose>
-            <Button type="submit" disabled={pending}>
+            <Button type="submit" disabled={pending} className="bg-gray-800">
               Save
             </Button>
           </DialogFooter>

@@ -25,8 +25,8 @@ export const BoardList = ({ orgId, query }: BoardListProps) => {
 
   if (data === undefined) {
     return (
-      <div className="h-full overflow-y-auto px-5">
-        <h2 className="text-3xl">
+      <div className="h-full bg-white dark:bg-gray-400 overflow-y-auto px-5 py-5">
+        <h2 className="text-3xl text-black dark:text-white">
           {query.favorites ? "Favorite boards" : "Team boards"}
         </h2>
         {/*  */}
@@ -52,8 +52,8 @@ export const BoardList = ({ orgId, query }: BoardListProps) => {
   }
 
   return (
-    <div className="h-full overflow-y-auto px-5">
-      <h2 className="text-3xl">
+    <div className="h-full bg-white dark:bg-gray-400 overflow-y-auto px-5 py-5">
+      <h2 className="text-3xl text-black dark:text-white">
         {query.favorites ? "Favorite boards" : "Team boards"}
       </h2>
       {/*  */}

@@ -4,6 +4,8 @@ import ConvexClietProvider from "@/providers/convex-client-provider";
 import { Toaster } from "@/components/ui/toaster";
 import { ModalProvider } from "@/providers/modal-provider";
 import { ThemeProvider } from "@/providers/theme-provider";
+import { Suspense } from "react";
+import Loading from "@/components/auth/Loading";
 
 export const metadata: Metadata = {
   title: "Realtime Board",
@@ -16,15 +18,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
-        <ConvexClietProvider>
-          <ThemeProvider>
-            <Toaster richColors />
-            <ModalProvider />
-            {children}
-          </ThemeProvider>
-        </ConvexClietProvider>
+        <Suspense fallback={<Loading />}>
+          <ConvexClietProvider>
+            <ThemeProvider>
+              <Toaster richColors />
+              <ModalProvider />
+              {children}
+            </ThemeProvider>
+          </ConvexClietProvider>
+        </Suspense>
       </body>
     </html>
   );

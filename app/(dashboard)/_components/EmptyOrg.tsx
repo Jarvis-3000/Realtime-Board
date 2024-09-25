@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const EmptyOrg = () => {
   return (
-    <div className="h-full w-full flex flex-col items-center justify-center">
+    <div className="h-full w-full bg-white dark:bg-gray-400 flex flex-col items-center justify-center">
       <Image src="/elements.svg" height={300} width={300} alt="empty org" />
       <h1 className="text-2xl font-bold mt-5 mb-2">Welcome To Board</h1>
       <h2 className="mb-5">Create an organization to get started</h2>

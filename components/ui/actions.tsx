@@ -63,7 +63,7 @@ export const Actions = ({
       <DropdownMenuContent
         side={side}
         sideOffset={sideOffset}
-        className="w-60"
+        className="w-60 dark:bg-gray-500 border-none"
         onClick={(e) => e.stopPropagation()}
       >
         <DropdownMenuItem onClick={onCopyLink}>
